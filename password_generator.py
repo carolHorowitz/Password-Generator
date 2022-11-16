@@ -53,7 +53,9 @@ def password_generator():
         password_all = (lowcase_letters + uppercase_letters)
         password = password_list(password_all, number_of_characters)
 
+    print("##################################")
     print('Your new password is: ' + password)
+    print("##################################")
 
 
 def password_list(password_all, number_of_characters):
