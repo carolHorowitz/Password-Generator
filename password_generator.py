@@ -1,7 +1,7 @@
 import random
 
-def password_generator():
 
+def password_generator():
     uppercase_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
                          'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     lowcase_letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -13,20 +13,12 @@ def password_generator():
     print("Welcome!! Let´s start to create a new password.")
     print("***********************************************")
 
-
-    number_of_characters = int(input("How many character should there be? Your password must contain a minimum of 4 "
-                                     "and a maximum of 10 characters: \n"))
-    if (number_of_characters < 4 or number_of_characters > 10):
-        print("################################################################################")
-        print("ERROR !! Your password must contain a minimun of 4 and maximun of 10 characters.")
-        print("################################################################################\n")
-
-        number_of_characters = int(
-            input("How many character should there be? Your password must contain a minimum of 4 "
-                  "and a maximum of 10 characters: \n"))
+    number_of_characters = int(input("How many character should there be?\n"))
 
     pass_letters = str(input("Should it have uppercase letters? Answer Y or N\n").strip().upper())
+
     pass_numbers = str(input("Should it include numbers and special characters? Answer Y or N\n").strip().upper())
+
     pass_simbols = str(input("Should it have simbols? Answer Y or N\n").strip().upper())
 
     if pass_letters == "Y" and pass_numbers == "Y" and pass_simbols == "Y":
@@ -56,7 +48,6 @@ def password_generator():
     print("##################################")
     print('Your new password is: ' + password)
     print("##################################")
-
 
 def password_list(password_all, number_of_characters):
     password = "".join(random.sample(password_all, number_of_characters))
