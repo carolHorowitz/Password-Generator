@@ -14,12 +14,25 @@ def password_generator():
     print("***********************************************")
 
     number_of_characters = int(input("How many character should there be?\n"))
+    while number_of_characters < 4 or number_of_characters > 10:
+        print("You must enter a number between 4 and 10.")
+        number_of_characters = int(input("How many character should there be?\n"))
+
 
     pass_letters = str(input("Should it have uppercase letters? Answer Y or N\n").strip().upper())
+    while pass_letters != "Y" and pass_letters != "N":
+        print("You must enter Y or N.")
+        pass_letters = str(input("Should it have uppercase letters? Answer Y or N\n").strip().upper())
 
     pass_numbers = str(input("Should it include numbers and special characters? Answer Y or N\n").strip().upper())
+    while pass_numbers != "Y" and pass_numbers != "N":
+        print("You must enter Y or N.")
+        pass_numbers = str(input("Should it include numbers and special characters? Answer Y or N\n").strip().upper())
 
     pass_simbols = str(input("Should it have simbols? Answer Y or N\n").strip().upper())
+    while pass_simbols != "Y" and pass_simbols != "N":
+        print("You must enter Y or N.")
+        pass_simbols = str(input("Should it have simbols? Answer Y or N\n").strip().upper())
 
     if pass_letters == "Y" and pass_numbers == "Y" and pass_simbols == "Y":
         password_all = (uppercase_letters + lowcase_letters + numbers + simbols)
